@@ -145,7 +145,7 @@
                 <artifactId>jmeter-analysis-maven-plugin</artifactId>
                 <version>1.0.4</version>
                 <configuration>
-                    <source>${project.build.directory}/jmeter/results/intranet.fusionspan.home.jtl</source>
+                    <source>${project.build.directory}/jmeter/results/intranet.fusionspan_home.jtl</source>
                 </configuration>
                 <executions>
                     <execution>
