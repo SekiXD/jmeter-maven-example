@@ -13,8 +13,7 @@
         generate graphs from the test results using the jmeter plugins CMDRunner. 
     </description>
 
-    <properties>	
-    	<java.version>1.7</java.version>
+    <properties>
         <jetty.port>9097</jetty.port>
         <jetty.stopPort>19097</jetty.stopPort>
         <performancetest.webservice.host>10.65.84.93</performancetest.webservice.host>
@@ -50,7 +49,7 @@
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-maven-plugin</artifactId>
-                <version>1.10.1</version>
+                <version>1.9.0</version>
                 <configuration>
                     <testResultsTimestamp>false</testResultsTimestamp>
                     <overrideRootLogLevel>DEBUG</overrideRootLogLevel>
@@ -88,7 +87,7 @@
                     <dependency>
                         <groupId>kg.apc</groupId>
                         <artifactId>jmeter-plugins</artifactId>
-                        <version>1.4.0</version>
+                        <version>1.0.0</version>
                         <exclusions>
                             <!--
                                 Unfortunately some transitive dependencies cannot be found on mvncentral
@@ -144,9 +143,9 @@
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-analysis-maven-plugin</artifactId>
-                <version>1.0.6</version>
+                <version>1.0.4</version>
                 <configuration>
-                    <source>${project.build.directory}/jmeter/results/google_home.jtl</source>
+                    <source>${project.build.directory}/jmeter/results/intranet_fusionspan_home.jtl</source>
                 </configuration>
                 <executions>
                     <execution>
@@ -161,9 +160,9 @@
 
             <plugin>
                 <!-- To start an embedded jetty with a simple webapp for demonstration purposes -->
-                <groupId>org.eclipse.jetty</groupId>
+                <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.3.8.v20160314</version>
+                <version>8.1.14.v20131031</version>
                 <configuration>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
@@ -189,25 +188,25 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <inputFile>${project.build.directory}/jmeter/results/google_home.jtl</inputFile>
+                    <inputFile>${project.build.directory}/jmeter/results/intranet_fusionspan_home.jtl</inputFile>
                     <graphs>
                         <graph>
                             <pluginType>ThreadsStateOverTime</pluginType>
                             <width>800</width>
                             <height>600</height>
-                            <outputFile>${project.build.directory}/jmeter/results/google_home-ThreadsStateOverTime.png</outputFile>
+                            <outputFile>${project.build.directory}/jmeter/results/intranet_fusionspan_home-ThreadsStateOverTime.png</outputFile>
                         </graph>
                         <graph>
                             <pluginType>ResponseTimesOverTime</pluginType>
                             <width>800</width>
                             <height>600</height>
-                            <outputFile>${project.build.directory}/jmeter/results/google_home-ResponseTimesOverTime.png</outputFile>
+                            <outputFile>${project.build.directory}/jmeter/results/intranet_fusionspan_home-ResponseTimesOverTime.png</outputFile>
                         </graph>
                         <graph>
                             <pluginType>TransactionsPerSecond</pluginType>
                             <width>800</width>
                             <height>600</height>
-                            <outputFile>${project.build.directory}/jmeter/results/google_home-TransactionsPerSecond.png</outputFile>
+                            <outputFile>${project.build.directory}/jmeter/results/intranet_fusionspan_home-TransactionsPerSecond.png</outputFile>
                         </graph>
                    </graphs>
                 </configuration>
