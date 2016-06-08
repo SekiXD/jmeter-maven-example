@@ -22,7 +22,7 @@
         <performancetest.connectTimeout>1000</performancetest.connectTimeout>
         <performancetest.responseTimeout>3000</performancetest.responseTimeout>
         <performancetest.threadCount>20</performancetest.threadCount>
-        <performancetest.rampTime>20</performancetest.rampTime>
+        <performancetest.rampTime>1</performancetest.rampTime>
         <performancetest.loopCount>10</performancetest.loopCount>
     </properties>
 
