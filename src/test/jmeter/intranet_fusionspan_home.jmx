@@ -25,7 +25,7 @@
           </elementProp>
           <elementProp name="RAMP_TIME" elementType="Argument">
             <stringProp name="Argument.name">RAMP_TIME</stringProp>
-            <stringProp name="Argument.value">${__P(rampTime, 10)}</stringProp>
+            <stringProp name="Argument.value">${__P(rampTime, 5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
