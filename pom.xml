@@ -22,7 +22,7 @@
         <performancetest.connectTimeout>1000</performancetest.connectTimeout>
         <performancetest.responseTimeout>3000</performancetest.responseTimeout>
         <performancetest.threadCount>20</performancetest.threadCount>
-        <performancetest.rampTime>1</performancetest.rampTime>
+        <performancetest.rampTime>10</performancetest.rampTime> <!-- issue is here? -->
         <performancetest.loopCount>10</performancetest.loopCount>
     </properties>
 
@@ -41,7 +41,7 @@
                 <performancetest.webservice.host>tomcat7-example-webapp.mlex.cloudbees.net</performancetest.webservice.host>
                 <performancetest.webservice.port>80</performancetest.webservice.port>
                 <performancetest.threadCount>5</performancetest.threadCount>
-                <performancetest.rampTime>5</performancetest.rampTime>
+                <performancetest.rampTime>1</performancetest.rampTime>
                 <performancetest.loopCount>5</performancetest.loopCount>
             </properties>
         </profile>
